@@ -8,11 +8,12 @@
 
 ## 목차
 
-- [팀원 구성](#팀원-구성)
+
 - [개발 목표](#개발-목표)
 - [사용 기술](#사용-기술)
 - [Advanced Feature](#advanced-feature)
 - [개선 사항](#개선-사항)
+- [Architecture](#Architecture)
 
 ## 팀원 구성
 
@@ -64,87 +65,10 @@
 - 디자인
   - Figma
 
-## Advanced Feature
+## Architecture
 
-- AI 번역(DeepL AI) 기능 제공
+![CI_CD - System Architecture](https://github.com/user-attachments/assets/e1ffe1df-3bfe-4447-acd7-739bb4180d1e)
 
-  - 출발언어 자동 감지
-
-    - request
-
-      ```javaScript
-      const deepLApi = (text, target_lang) => {
-      const data = {
-          text: [text],
-          target_lang: target_lang,
-      };
-
-      return axios
-
-          .post(protocol + 'api/translate', data, {
-              headers: {
-                  Authorization: token,
-                  'Content-Type': 'application/json',
-              },
-          })
-          .then((res) => {
-              console.log(res.data.translations[0].text);
-              return res.data.translations[0].text;
-          })
-          .catch((error) => {
-              console.error('API 호출 오류:', error);
-              throw error;
-          });
-      };
-      ```
-
-    - response (DeepLController)
-
-      ```java
-      package com.v6.yeogaekgi.util.DeepL;
-
-      import org.springframework.beans.factory.annotation.Value;
-      import org.springframework.http.HttpEntity;
-      import org.springframework.http.HttpHeaders;
-      import org.springframework.http.MediaType;
-      import org.springframework.http.ResponseEntity;
-      import org.springframework.web.bind.annotation.*;
-      import org.springframework.web.client.RestTemplate;
-
-      import java.util.Collections;
-
-      @RestController
-      @RequestMapping("/api")
-      @CrossOrigin(origins = {"*"})
-      public class TranslationController {
-
-          private final String deeplApiUrl = "https://api-free.deepl.com/v2/translate";
-
-          @Value("${deepl.auth-key}")
-          private String authKey;
-
-          @PostMapping("/translate")
-          public ResponseEntity<TranslationDTOResponse> translate(@RequestBody TranslationDTORequest request) {
-              String targetLang = request.getTarget_lang();
-
-              String apiUrl = deeplApiUrl + "?target_lang=" + targetLang;
-              RestTemplate restTemplate = new RestTemplate();
-
-              HttpHeaders headers = new HttpHeaders();
-              headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-              headers.setContentType(MediaType.APPLICATION_JSON);
-              headers.add("Authorization", "DeepL-Auth-Key " + authKey);
-
-              TranslationDTOResponse response = restTemplate.postForObject(apiUrl, createHttpEntity(request, headers), TranslationDTOResponse.class);
-
-              return ResponseEntity.ok(response);
-          }
-
-          private HttpEntity<TranslationDTORequest> createHttpEntity(TranslationDTORequest request, HttpHeaders headers) {
-              return new HttpEntity<>(request, headers);
-          }
-      }
-      ```
 
 ## 개선 사항
 
