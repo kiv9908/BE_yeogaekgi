@@ -6,13 +6,25 @@
 
 ![여객기-팜플렛-001](https://github.com/user-attachments/assets/f52c3cf7-c093-4e97-b7eb-61c2c4432f15)
 
-
 ## 목차
 
+- [팀원 구성](#팀원-구성)
 - [개발 목표](#개발-목표)
 - [사용 기술](#사용-기술)
 - [Advanced Feature](#advanced-feature)
 - [개선 사항](#개선-사항)
+
+## 팀원 구성
+
+<div align="center">
+
+|                   **황세현**                    |                   **김제인**                    |              **백승준**               |               **서석환**                |              **이봉욱**               |               **정현진**                |
+| :---------------------------------------------: | :---------------------------------------------: | :-----------------------------------: | :-------------------------------------: | :-----------------------------------: | :-------------------------------------: |
+| [HwangSettong](https://github.com/HwangSettong) | [jane-kim-279](https://github.com/jane-kim-279) | [mint723](https://github.com/mint723) | [shseo232](https://github.com/shseo232) | [kiv9908](https://github.com/kiv9908) | [nijnuyhj](https://github.com/nijnuyhj) |
+
+</div>
+
+<br>
 
 ## 개발 목표
 
@@ -29,15 +41,28 @@
 ## 사용 기술
 
 - BE
-  - Spring Boot
-  - Java
-  - JPA
-  - MySQL
+
+  - Spring Boot, Java, JPA, MySQL
+
 - FE
-  - JavaScript
-  - React
-  - HTML
-  - CSS
+
+  - JavaScript, React, HTML, CSS
+
+- 버전 및 이슈관리
+
+  - Git
+  - Github
+
+- 협업 툴
+
+  - Discord, Notion, Google Calender, Google Sheet
+
+- 서비스 배포 환경
+
+  - AWS EC2, Docker, Nginx
+
+- 디자인
+  - Figma
 
 ## Advanced Feature
 
