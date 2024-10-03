@@ -1,6 +1,7 @@
 <div align="center">
 <h2>[2024] 여객기(yeogaekgi) ✈️</h2>
-<b>여</b>행가이드가 될 관광<b>객</b>들의 <b>기</b>록<br> 외국인 관광객 선불카드 서비스를 제공하며 결제내역을 기반 리뷰 작성이 가능합니다. 💸
+<b>여</b>행가이드가 될 관광<b>객</b>들의 <b>기</b>록<br> 외국인 관광객 선불카드 서비스를 제공하며 결제내역을 기반 리뷰 작성이 가능합니다. 💸<br>
+[🔗](https://github.com/v6-yeogaekgi/FE_yeogaekgi) 여객기 frontend repo | [🔗](https://github.com/v6-yeogaekgi/BE_yeogaekgi) 여객기 backend repo
 </div><br>
 
 
